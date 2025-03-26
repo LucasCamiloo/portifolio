@@ -1,0 +1,27 @@
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+}
+
+
+.project-main {
+    flex: 1 0 auto !important;
+}
+
+
+.project-footer {
+    position: relative !important;
+    margin-top: auto !important;
+}
+
+
+.project-main a::after,
+.project-header a::after,
+.project-footer a::after {
+    display: none !important; 
+}

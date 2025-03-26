@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto DYP - Gestão de Anúncios</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/projects/projects.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <div class="light-ray"></div>
+    <div class="glow"></div>
+    <div class="glow"></div>
+    <div class="glow"></div>
+    
+    <header class="project-header">
+        <div class="container">
+            <nav class="project-nav">
+                <a href="/" class="nav-logo">&lt; Lucas Camilo /&gt;</a>
+                <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+            </nav>
+        </div>
+       
+    </header>
+
+    <main class="project-main">
+        
+        <div class="container">
+            <section class="project-hero">
+                <h1 class="project-title">DYP - Sistema de Gestão de Anúncios</h1>
+                <div class="project-meta">
+                    <span class="project-tech-tag">Node.js</span>
+                    <span class="project-tech-tag">Express</span>
+                    <span class="project-tech-tag">MongoDB</span>
+                    <span class="project-tech-tag">Docker</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://dyp.tv.br" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Visitar site</a>
+                </div>
+            </section>
+            
+            <section class="project-content">
+                <div class="project-description">
+                    <h2>Visão Geral</h2>
+                    <p>
+                        DYP é um sistema web avançado para gestão de anúncios de produtos que permite aos usuários criar e gerenciar 
+                        publicações de forma rápida e eficiente. O sistema se destaca pela capacidade de atualizar automaticamente os preços 
+                        dos produtos nos anúncios, mantendo todas as informações sempre atualizadas sem intervenção manual.
+                    </p>
+                    
+                    <h2>Desafios e Soluções</h2>
+                    <p>
+                        Um dos principais desafios foi implementar um sistema que pudesse atualizar os preços dos produtos em tempo real, 
+                        sem afetar a experiência do usuário final. Desenvolvemos uma arquitetura que utiliza SSE ou websockets para comunicação 
+                        em tempo real entre o servidor e as interfaces dos usuários, permitindo atualizações instantâneas.
+                    </p>
+                    
+                    <h2>Características Principais</h2>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Interface intuitiva para criação rápida de anúncios</li>
+                        <li><i class="fas fa-check"></i> Sistema de atualização automática de preços</li>
+                        <li><i class="fas fa-check"></i> Dashboard com estatísticas de desempenho dos anúncios</li>
+                        <li><i class="fas fa-check"></i> Integrações com principais plataformas de e-commerce</li>
+                        <li><i class="fas fa-check"></i> Sistema de notificação para mudanças significativas de preço</li>
+                    </ul>
+                    
+                    <h2>Tecnologias Utilizadas</h2>
+                    <p>
+                        O backend foi construído com Node.js e Express, utilizando MongoDB para armazenamento de dados. 
+                        A arquitetura foi desenvolvida em containers Docker para facilitar o deployment e escalabilidade.
+                        O frontend utiliza React para fazer uma interface bonita e funcional. Além de que o sistema foi feito para aguentar vários produtos e anuncios diferentes, garantindo uma experiência fluida mesmo com múltiplas atualizações simultâneas.
+                    </p>
+                    
+                    <h2>Resultados</h2>
+                    <p>
+                        O sistema DYP ajudou diversos clientes a aumentar sua eficiência operacional, reduzindo o tempo 
+                        necessário para gerenciar anúncios, eliminando erros de precificação que 
+                        costumavam ocorrer em atualizações manuais.
+                    </p>
+                </div>
+                <div class="project-showcase">
+                    <div class="showcase-item">
+                        <div class="showcase-placeholder">
+                            <img src="img/dyp-f.jpg" alt="Interface do DYP">
+                            <div class="caption">Imagem fictícia do funcionamento</div>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-placeholder">
+                            
+                            <img src="img/dyp-a.jpg" alt="Interface do DYP">
+                            <div class="caption">Imagem fictícia do funcionamento</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+            
+        </div>
+   
+    </main>
+    
+    <footer class="project-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; 2025 | Lucas Camilo</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
