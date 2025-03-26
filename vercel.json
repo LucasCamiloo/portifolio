@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    { 
+      "src": "server.js", 
+      "use": "@vercel/node" 
+    },
+    {
+      "src": "public/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    { "src": "/projects/dyp", "dest": "/server.js" },
+    { "src": "/projects/orientacao-vocacional", "dest": "/server.js" },
+    { "src": "/projects/portfolio", "dest": "/server.js" },
+    { "src": "/projects/project-reset.css", "dest": "/server.js" },
+    { "src": "/404.css", "dest": "/server.js" },
+    { "src": "/(.*)", "dest": "/server.js" }
+  ]
+}
