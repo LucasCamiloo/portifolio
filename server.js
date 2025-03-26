@@ -22,7 +22,7 @@ app.get('/projects/orientacao-vocacional', (req, res) => {
 
 
 app.get('/projects/portfolio', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'projects', 'portifolio.html'));
+  res.sendFile(path.join(__dirname, 'public', 'projects', 'portfolio.html'));
 });
 
 app.get('/projects/project-reset.css', (req, res) => {
@@ -31,6 +31,9 @@ app.get('/projects/project-reset.css', (req, res) => {
 
 app.get('/404.css', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', '404.css'));
+});
+app.get('/three.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'projects', 'three.js'));
 });
 
 //404

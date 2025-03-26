@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Lucas Camilo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/projects/projects.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+    
+    <div class="light-ray"></div>
+    <div class="glow"></div>
+    <div class="glow"></div>
+    <div class="glow"></div>
+    
+    <header class="project-header">
+        <div class="container">
+            <nav class="project-nav">
+                <a href="/" class="nav-logo">&lt; Lucas Camilo /&gt;</a>
+                <a href="/" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="project-main">
+        <div class="container">
+            <section class="project-hero">
+                <h1 class="project-title">Portfólio</h1>
+                <p class="project-subtitle">Meu portfólio pessoal</p>
+                <div class="project-meta">
+                    <span class="project-tech-tag">Node.js</span>
+                    <span class="project-tech-tag">Express</span>
+                    <span class="project-tech-tag">JavaScript</span>
+                    <span class="project-tech-tag">HTML/CSS</span>
+                </div>
+            </section>
+            
+            <section class="project-content">
+                <div class="project-description">
+                    <h2>Visão Geral</h2>
+                    <p>
+                        Este site de portfólio foi desenvolvido com foco em design responsivo, animações interativas e arquitetura modular. 
+                        Ele apresenta minhas habilidades, projetos e formas de contato, proporcionando uma experiência de navegação agradável e intuitiva.
+                    </p>
+                    
+                    <h2>Desafios e Soluções</h2>
+                    <p>
+                        Um dos principais desafios foi criar um design que fosse ao mesmo tempo moderno e funcional, garantindo que todas as informações 
+                        fossem facilmente acessíveis em diferentes dispositivos. Utilizei técnicas de design responsivo e animações CSS para criar uma 
+                        interface atraente e dinâmica.
+                    </p>
+                    
+                    <h2>Características Principais</h2>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Design responsivo e moderno</li>
+                        <li><i class="fas fa-check"></i> Animações interativas</li>
+                        <li><i class="fas fa-check"></i> Seção de projetos destacados</li>
+                        <li><i class="fas fa-check"></i> Formulário de contato funcional</li>
+                        <li><i class="fas fa-check"></i> Integração com redes sociais</li>
+                    </ul>
+                    
+                    <h2>Tecnologias Utilizadas</h2>
+                    <p>
+                        O site foi desenvolvido utilizando Node.js e Express no backend, com HTML, CSS e JavaScript no frontend. 
+                        Utilizei também bibliotecas como Font Awesome para ícones e Google Fonts para tipografia.
+                    </p>
+                    
+                    <h2>Resultados</h2>
+                    <p>
+                        O portfólio tem sido uma ferramenta essencial para apresentar meu trabalho e habilidades a potenciais clientes e empregadores. 
+                        Ele tem recebido feedback positivo pela sua usabilidade e design atraente.
+                    </p>
+                </div>
+                
+                <div class="project-showcase">
+                    <div class="showcase-item">
+                        <div class="showcase-placeholder">
+                            <img src="img/portfolio.jpg" alt="Screenshot da página inicial">
+                            <div class="caption">Imagem da home page do portfólio</div>
+                        </div>
+                    </div>
+                    <div class="showcase-item">
+                        <div class="showcase-placeholder" id="three-demo">
+                            <!-- Three.js will be initialized here -->
+                            <div class="caption">Amostra do poder do Three.js</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+    </main>
+    
+    <footer class="project-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="copyright">&copy; 2025 | Lucas Camilo</p>
+                <div class="social-links">
+                    <a href="https://github.com/LucasCamiloo" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lucasdcamilo/" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Three.js demo script
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('three-demo');
+            if (!container) return;
+            
+            // Scene setup
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+            camera.position.z = 5;
+            
+            const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+            renderer.setSize(container.clientWidth, container.clientHeight);
+            renderer.setClearColor(0x000000, 0);
+            
+            // Clear container (but keep the caption div)
+            // First, save the caption
+            const caption = container.querySelector('.caption');
+            
+            // Then clear container except caption
+            while (container.firstChild) {
+                if (container.firstChild === caption) break;
+                container.removeChild(container.firstChild);
+            }
+            
+            // Add renderer as first child
+            container.insertBefore(renderer.domElement, container.firstChild);
+            
+            // Add a cube
+            const geometry = new THREE.BoxGeometry();
+            const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+            const cube = new THREE.Mesh(geometry, material);
+            scene.add(cube);
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                cube.rotation.x += 0.01;
+                cube.rotation.y += 0.01;
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+        });
+    </script>
+</body>
+</html>
