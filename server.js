@@ -27,6 +27,10 @@ app.get('/projects/project-reset.css', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'projects', 'project-reset.css'));
 });
 
+app.get('/404.css', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', '404.css'));
+});
+
 
 //404
 app.get('*', function(req, res){
